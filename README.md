@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/FileToLink/Thunder.jpg" alt="Thunder Logo" width="120">
+  <img src="https://cdn.jsdelivr.net/gh/salman-dev-app/FileToLink@main/Thunder.jpg" alt="Thunder Logo" width="120">
   <h1 align="center">⚡ Thunder</h1>
 </p>
 
@@ -10,8 +10,8 @@
 <p align="center">
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.13%2B-blue?style=for-the-badge&logo=python" alt="Python Version"></a>
   <a href="https://github.com/Mayuri-Chan/pyrofork"><img src="https://img.shields.io/badge/Pyrofork-red?style=for-the-badge" alt="Pyrofork"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/fyaz05/FileToLink?style=for-the-badge&color=green" alt="License"></a>
-  <a href="https://t.me/Thunder_Updates"><img src="https://img.shields.io/badge/Telegram-Channel-blue?style=for-the-badge&logo=telegram" alt="Telegram Channel"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/salman-dev-app/FileToLink?style=for-the-badge&color=green" alt="License"></a>
+  <a href="https://t.me/salmandevapp"><img src="https://img.shields.io/badge/Telegram-Channel-blue?style=for-the-badge&logo=telegram" alt="Telegram Channel"></a>
 </p>
 
 <hr>
@@ -298,7 +298,7 @@ This section covers the complete setup process for deploying Thunder, from prere
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/fyaz05/FileToLink.git
+git clone https://github.com/salman-dev-app/FileToLink.git
 cd FileToLink
 
 # 2. Configure
@@ -315,7 +315,7 @@ docker run -d --name thunder -p 8080:8080 thunder
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/fyaz05/FileToLink.git
+git clone https://github.com/salman-dev-app/FileToLink.git
 cd FileToLink
 
 # 2. Setup virtual environment
@@ -341,21 +341,21 @@ python -m Thunder
 
 ### Deploy to Koyeb
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=docker&image=docker.io/fyaz05/thunder:latest&name=thunder&ports=8080;http;/&env[API_ID]=&env[API_HASH]=&env[BOT_TOKEN]=&env[BIN_CHANNEL]=&env[OWNER_ID]=&env[DATABASE_URL]=&env[FQDN]=)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=docker&image=docker.io/salman-dev-app/thunder:latest&name=thunder&ports=8080;http;/&env[API_ID]=&env[API_HASH]=&env[BOT_TOKEN]=&env[BIN_CHANNEL]=&env[OWNER_ID]=&env[DATABASE_URL]=&env[FQDN]=)
 
 After deployment, to add any additional environment variables, use the Koyeb dashboard under **Settings** → **Environment Variables**.
 
 ### Deploy to Render
 
 1. Open [Render Dashboard](https://dashboard.render.com) → **New** → **Web Service**
-2. Choose **Existing Image**: `fyaz05/thunder:latest`
+2. Choose **Existing Image**: `salman-dev-app/thunder:latest`
 3. Add your environment variables
 4. Click **Deploy**
 
 ### Deploy to Railway
 
 1. Open [Railway](https://railway.app) → **New Project** → **Deploy Service**
-2. Choose **Docker Image**: `fyaz05/thunder:latest`
+2. Choose **Docker Image**: `salman-dev-app/thunder:latest`
 3. Add your environment variables
 4. Click **Deploy**
 
@@ -386,7 +386,7 @@ After deployment, to add any additional environment variables, use the Koyeb das
    ```
 7. Set `UPSTREAM_REPO` for auto-updates on dyno restart:
    ```bash
-   heroku config:set UPSTREAM_REPO="https://github.com/fyaz05/FileToLink" UPSTREAM_BRANCH="main"
+   heroku config:set UPSTREAM_REPO="https://github.com/salman-dev-app/FileToLink" UPSTREAM_BRANCH="main"
    ```
 
 > **Note:** Heroku provides HTTPS automatically. Set `FQDN` to `your-app-name.herokuapp.com` and `HAS_SSL` to `True`.
@@ -532,7 +532,7 @@ A: This is likely a **Telegram Flood Wait**. To prevent spam, Telegram temporari
 #### **Performance**
 
 **Q: How can I fix slow download and streaming speeds?**
-A: If your speeds are slow, here’s how to fix it:
+A: If your speeds are slow, here's how to fix it:
 
 - **Add More Clients**: This is the best solution. Add `MULTI_TOKEN`s to your `config.env` to distribute the workload and increase throughput.
 - **Use DC4 Accounts**: For top performance, use Telegram accounts from **Data Center 4 (DC4)**, as they often have the fastest connection. Use `/dc` to check an account's data center.
@@ -577,6 +577,19 @@ This project is not affiliated with Telegram. Use it responsibly and in complian
 
 <p align="center">
   <b>⭐ Star this project if you find it useful!</b><br>
-  <a href="https://github.com/fyaz05/FileToLink/issues/new">Report Bug</a> •
-  <a href="https://github.com/fyaz05/FileToLink/issues/new">Request Feature</a>
+  <a href="https://github.com/salman-dev-app/FileToLink/issues/new">Report Bug</a> •
+  <a href="https://github.com/salman-dev-app/FileToLink/issues/new">Request Feature</a> •
+  <a href="https://t.me/Otakuosenpai">Contact Developer</a> •
+  <a href="https://t.me/salmandevapp">Telegram Channel</a> •
+  <a href="https://facebook.com/salmandevapp">Facebook Page</a>
+</p>
+
+---
+
+<p align="center">
+  <b>Developed & Maintained by <a href="https://github.com/salman-dev-app">Salman</a></b><br>
+  <a href="https://github.com/salman-dev-app">GitHub</a> •
+  <a href="https://t.me/Otakuosenpai">Telegram</a> •
+  <a href="https://t.me/salmandevapp">Channel</a> •
+  <a href="https://facebook.com/salmandevapp">Facebook</a>
 </p>
