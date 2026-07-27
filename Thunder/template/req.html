@@ -9,8 +9,8 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#030304">
 
     <!-- Logo & Favicon -->
-    <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/salman-dev-app/FileToLink@main/logo.png">
-    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/salman-dev-app/FileToLink@main/logo.png">
+    <link rel="icon" type="image/png" href="/static/logo.png">
+    <link rel="apple-touch-icon" href="/static/logo.png">
 
     <!-- SEO & Social Sharing (Open Graph) -->
     <meta name="description"
@@ -19,13 +19,13 @@
     <meta property="og:title" content="{{ file_name }} — Cinema">
     <meta property="og:description"
         content="Stream '{{ file_name }}' in a beautiful, atmospheric environment with professional playback controls.">
-    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/salman-dev-app/FileToLink@main/logo.png">
+    <meta property="og:image" content="{{ base_url }}/static/logo.png">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ file_name }} — Cinema">
     <meta name="twitter:description" content="Stream '{{ file_name }}' in a beautiful, atmospheric environment.">
-    <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/salman-dev-app/FileToLink@main/logo.png">
+    <meta name="twitter:image" content="{{ base_url }}/static/logo.png">
 
     <!-- Vidstack Player -->
     <link rel="stylesheet" href="https://cdn.vidstack.io/player/theme.css" />
@@ -44,9 +44,8 @@
             rel="stylesheet">
     </noscript>
 
-    <!-- Styles (CDN-hosted) -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/salman-dev-app/FileToLink@main/Obsidian%20Ember/styles.css">
+    <!-- Styles (served locally by the bot's web server) -->
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 
 <body>
@@ -357,8 +356,8 @@
     <script>
         window.__CINEMA_CONFIG__ = { src: {{ src | tojson }} };
     </script>
-    <!-- Main Script (CDN-hosted) -->
-    <script src="https://cdn.jsdelivr.net/gh/salman-dev-app/FileToLink@main/Obsidian%20Ember/script.js"></script>
+    <!-- Main Script (served locally by the bot's web server) -->
+    <script src="/static/script.js"></script>
 </body>
 
 </html>

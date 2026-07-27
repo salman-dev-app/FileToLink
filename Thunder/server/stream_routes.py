@@ -3,6 +3,7 @@
 import re
 import secrets
 import time
+from pathlib import Path
 from urllib.parse import quote, unquote
 
 from aiohttp import web
@@ -260,6 +261,30 @@ async def _serve_media_response(
         status=206 if range_header else 200,
         body=stream_generator(),
         headers=headers
+    )
+
+
+TEMPLATE_STATIC_DIR = Path(__file__).resolve().parent.parent / "template" / "static"
+
+
+@routes.get(r"/static/{asset:.+}", allow_head=True)
+async def static_assets(request: web.Request):
+    asset = request.match_info["asset"]
+    try:
+        asset_path = (TEMPLATE_STATIC_DIR / asset).resolve()
+        asset_path.relative_to(TEMPLATE_STATIC_DIR)
+    except (ValueError, OSError):
+        raise web.HTTPNotFound(text="Asset not found")
+
+    if not asset_path.is_file():
+        raise web.HTTPNotFound(text="Asset not found")
+
+    return web.FileResponse(
+        asset_path,
+        headers={
+            "Cache-Control": "public, max-age=86400",
+            "Access-Control-Allow-Origin": "*",
+        },
     )
 
 
