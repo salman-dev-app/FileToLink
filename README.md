@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/salman-dev-app/FileToLink@main/Thunder.jpg" alt="Thunder Logo" width="120">
+  <img src="Thunder/template/static/logo.png" alt="Thunder Logo" width="120">
   <h1 align="center">⚡ Thunder</h1>
 </p>
 

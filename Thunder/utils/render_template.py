@@ -23,18 +23,21 @@ template_env = Environment(
 
 async def render_media_page(file_name: str, src: str, requested_action: str | None = None) -> str:
     # NOTE: src must be a pre-encoded URL. Templates use |safe to avoid double-encoding.
+    base_url = Var.URL.rstrip('/')
     if requested_action == 'stream':
         template = template_env.get_template('req.html')
         context = {
             'heading': f"View {file_name}",
             'file_name': file_name,
-            'src': f"{src}?disposition=inline"
+            'src': f"{src}?disposition=inline",
+            'base_url': base_url
         }
     else:
         template = template_env.get_template('dl.html')
         context = {
             'file_name': file_name,
-            'src': src
+            'src': src,
+            'base_url': base_url
         }
     return await template.render_async(**context)
 
